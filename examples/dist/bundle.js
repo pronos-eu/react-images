@@ -2893,7 +2893,7 @@ function Arrow(_ref, _ref2) {
 		'button',
 		_extends({
 			type: 'button',
-			className: "arrowLightBox " + (0, _aphroditeNoImportant.css)(classes.arrow, classes['arrow__direction__' + direction], size && classes['arrow__size__' + size]),
+			className: "arrowLightBox" + direction + " " + (0, _aphroditeNoImportant.css)(classes.arrow, classes['arrow__direction__' + direction], size && classes['arrow__size__' + size]),
 			onClick: onClick,
 			onTouchEnd: onClick
 		}, props),
@@ -3164,13 +3164,13 @@ function Header(_ref, _ref2) {
 
 	return _react2['default'].createElement(
 		'div',
-		_extends({ className: "headerLightBox " + (0, _aphroditeNoImportant.css)(classes.header) }, props),
+		_extends({ className: "lightBoxHeader " + (0, _aphroditeNoImportant.css)(classes.header) }, props),
 		customControls ? customControls : _react2['default'].createElement('span', null),
 		!!showCloseButton && _react2['default'].createElement(
 			'button',
 			{
 				title: closeButtonTitle,
-				className: (0, _aphroditeNoImportant.css)(classes.close),
+				className: "lightBoxClose " + (0, _aphroditeNoImportant.css)(classes.close),
 				onClick: onClose
 			},
 			_react2['default'].createElement(_Icon2['default'], { fill: !!theme.close && theme.close.fill || _theme2['default'].close.fill, type: 'close' })

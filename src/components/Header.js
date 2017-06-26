@@ -18,12 +18,12 @@ function Header ({
 	const classes = StyleSheet.create(deepMerge(defaultStyles, theme));
 
 	return (
-		<div className={"headerLightBox " + css(classes.header)} {...props}>
+		<div className={"lightBoxHeader " + css(classes.header)} {...props}>
 			{customControls ? customControls : <span />}
 			{!!showCloseButton && (
 				<button
 					title={closeButtonTitle}
-					className={css(classes.close)}
+					className={"lightBoxClose " + css(classes.close)}
 					onClick={onClose}
 				>
 					<Icon fill={!!theme.close && theme.close.fill || defaults.close.fill} type="close" />
