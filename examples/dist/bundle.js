@@ -2893,7 +2893,7 @@ function Arrow(_ref, _ref2) {
 		'button',
 		_extends({
 			type: 'button',
-			className: "arrowLightBox" + direction + " " + (0, _aphroditeNoImportant.css)(classes.arrow, classes['arrow__direction__' + direction], size && classes['arrow__size__' + size]),
+			className: "arrowsLBox " + "lightBoxArrow" + direction + " " + (0, _aphroditeNoImportant.css)(classes.arrow, classes['arrow__direction__' + direction], size && classes['arrow__size__' + size]),
 			onClick: onClick,
 			onTouchEnd: onClick
 		}, props),
