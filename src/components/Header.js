@@ -18,7 +18,7 @@ function Header ({
 	const classes = StyleSheet.create(deepMerge(defaultStyles, theme));
 
 	return (
-		<div className={css(classes.header)} {...props}>
+		<div className={"headerLightBox " + css(classes.header)} {...props}>
 			{customControls ? customControls : <span />}
 			{!!showCloseButton && (
 				<button

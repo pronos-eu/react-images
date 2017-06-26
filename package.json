@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jossmac/react-images.git"
+    "url": "https://github.com/pronos-eu/react-images.git"
   },
   "dependencies": {
     "aphrodite": "^0.5.0",
@@ -46,7 +46,7 @@
     "watch": "gulp watch:lib"
   },
   "bugs": {
-    "url": "https://github.com/jossmac/react-images/issues"
+    "url": "https://github.com/pronos-eu/react-images/issues"
   },
   "homepage": "http://jossmac.github.io/react-images",
   "keywords": [

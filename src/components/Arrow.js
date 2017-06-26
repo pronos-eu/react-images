@@ -21,7 +21,7 @@ function Arrow ({
 	return (
 		<button
 			type="button"
-			className={css(classes.arrow, classes['arrow__direction__' + direction], size && classes['arrow__size__' + size])}
+			className={"arrowLightBox " + css(classes.arrow, classes['arrow__direction__' + direction], size && classes['arrow__size__' + size])}
 			onClick={onClick}
 			onTouchEnd={onClick}
 			{...props}

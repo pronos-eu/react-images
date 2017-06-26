@@ -177,7 +177,7 @@ class Lightbox extends Component {
 				onClick={!!backdropClosesModal && onClose}
 				onTouchEnd={!!backdropClosesModal && onClose}
 			>
-				<div className={css(classes.content)} style={{ marginBottom: offsetThumbnails, maxWidth: width }}>
+				<div className={"lightBoxContent " + css(classes.content)} style={{ marginBottom: offsetThumbnails, maxWidth: width }}>
 					<Header
 						customControls={customControls}
 						onClose={onClose}
@@ -219,14 +219,14 @@ class Lightbox extends Component {
 		const heightOffset = `${theme.header.height + theme.footer.height + thumbnailsSize + (theme.container.gutter.vertical)}px`;
 
 		return (
-			<figure className={css(classes.figure)}>
+			<figure className={"lightBoxFigure " + css(classes.figure)}>
 				{/*
 					Re-implement when react warning "unknown props"
 					https://fb.me/react-unknown-prop is resolved
 					<Swipeable onSwipedLeft={this.gotoNext} onSwipedRight={this.gotoPrev} />
 				*/}
 				<img
-					className={css(classes.image)}
+					className={"lightBoxImage " + css(classes.image)}
 					onClick={!!onClickImage && onClickImage}
 					sizes={sizes}
 					alt={image.alt}

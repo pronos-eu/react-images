@@ -10,7 +10,7 @@ function Container ({ ...props }, { theme }) {
 
 	return (
 		<div
-			className={css(classes.container)}
+			className={"contaienrLightBox " + css(classes.container)}
 			{...props}
 		/>
 	);

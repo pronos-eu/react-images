@@ -19,7 +19,7 @@ function Footer ({
 	const classes = StyleSheet.create(deepMerge(defaultStyles, theme));
 
 	const imageCount = showCount ? (
-		<div className={css(classes.footerCount)}>
+		<div className={"footerLightBox " + css(classes.footerCount)}>
 			{countCurrent}
 			{countSeparator}
 			{countTotal}
