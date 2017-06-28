@@ -49,7 +49,6 @@ class Lightbox extends Component {
 			} else if (currentIndex && nextProps.currentImage < currentIndex) {
 				preloadIndex = prevIndex;
 			}
-
 			// if we know the user's direction just get one image
 			// otherwise, to be safe, we need to grab one in each direction
 			if (preloadIndex) {
@@ -92,7 +91,7 @@ class Lightbox extends Component {
 		}
 	}
 	gotoNext (event) {
-		if (this.props.currentImage === (this.props.images.length - 1)) return;
+		if (!this.props.carousel && this.props.currentImage === (this.props.images.length - 1)) return;
 		if (event) {
 			event.preventDefault();
 			event.stopPropagation();
@@ -101,7 +100,7 @@ class Lightbox extends Component {
 
 	}
 	gotoPrev (event) {
-		if (this.props.currentImage === 0) return;
+		if (!this.props.carousel && this.props.currentImage === 0) return;
 		if (event) {
 			event.preventDefault();
 			event.stopPropagation();
@@ -129,7 +128,7 @@ class Lightbox extends Component {
 	// ==============================
 
 	renderArrowPrev () {
-		//if (this.props.currentImage === 0) return null;
+		if (!this.props.carousel && this.props.currentImage === 0) return null;
 
 		return (
 			<Arrow
@@ -142,7 +141,7 @@ class Lightbox extends Component {
 		);
 	}
 	renderArrowNext () {
-		//if (this.props.currentImage === (this.props.images.length - 1)) return null;
+		if (!this.props.carousel && this.props.currentImage === (this.props.images.length - 1)) return null;
 
 		return (
 			<Arrow

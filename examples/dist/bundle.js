@@ -4030,7 +4030,6 @@ var Lightbox = (function (_Component) {
 				} else if (currentIndex && nextProps.currentImage < currentIndex) {
 					preloadIndex = prevIndex;
 				}
-
 				// if we know the user's direction just get one image
 				// otherwise, to be safe, we need to grab one in each direction
 				if (preloadIndex) {
@@ -4079,7 +4078,7 @@ var Lightbox = (function (_Component) {
 	}, {
 		key: 'gotoNext',
 		value: function gotoNext(event) {
-			if (this.props.currentImage === this.props.images.length - 1) return;
+			if (!this.props.carousel && this.props.currentImage === this.props.images.length - 1) return;
 			if (event) {
 				event.preventDefault();
 				event.stopPropagation();
@@ -4089,7 +4088,7 @@ var Lightbox = (function (_Component) {
 	}, {
 		key: 'gotoPrev',
 		value: function gotoPrev(event) {
-			if (this.props.currentImage === 0) return;
+			if (!this.props.carousel && this.props.currentImage === 0) return;
 			if (event) {
 				event.preventDefault();
 				event.stopPropagation();
@@ -4122,7 +4121,7 @@ var Lightbox = (function (_Component) {
 	}, {
 		key: 'renderArrowPrev',
 		value: function renderArrowPrev() {
-			//if (this.props.currentImage === 0) return null;
+			if (!this.props.carousel && this.props.currentImage === 0) return null;
 
 			return _react2['default'].createElement(_componentsArrow2['default'], {
 				direction: 'left',
@@ -4135,7 +4134,7 @@ var Lightbox = (function (_Component) {
 	}, {
 		key: 'renderArrowNext',
 		value: function renderArrowNext() {
-			//if (this.props.currentImage === (this.props.images.length - 1)) return null;
+			if (!this.props.carousel && this.props.currentImage === this.props.images.length - 1) return null;
 
 			return _react2['default'].createElement(_componentsArrow2['default'], {
 				direction: 'right',
