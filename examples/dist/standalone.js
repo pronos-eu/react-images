@@ -2945,6 +2945,7 @@ var Lightbox = (function (_Component) {
 				var currentIndex = this.props.currentImage;
 				var nextIndex = nextProps.currentImage + 1;
 				var prevIndex = nextProps.currentImage - 1;
+
 				var preloadIndex = undefined;
 
 				if (currentIndex && nextProps.currentImage > currentIndex) {
@@ -3044,7 +3045,7 @@ var Lightbox = (function (_Component) {
 	}, {
 		key: 'renderArrowPrev',
 		value: function renderArrowPrev() {
-			if (this.props.currentImage === 0) return null;
+			//if (this.props.currentImage === 0) return null;
 
 			return _react2['default'].createElement(_componentsArrow2['default'], {
 				direction: 'left',
@@ -3057,7 +3058,7 @@ var Lightbox = (function (_Component) {
 	}, {
 		key: 'renderArrowNext',
 		value: function renderArrowNext() {
-			if (this.props.currentImage === this.props.images.length - 1) return null;
+			//if (this.props.currentImage === (this.props.images.length - 1)) return null;
 
 			return _react2['default'].createElement(_componentsArrow2['default'], {
 				direction: 'right',
@@ -4211,7 +4212,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports["default"] = function (fill) {
-	return "<svg fill=\"" + fill + "\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"100%\" height=\"100%\" viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">\n\t\t<path d=\"M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4 L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1 c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1 c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z\"/>\n\t</svg>";
+	return "<button class=\"lightboxCloseBtn ui icon button close-button\">\n\t\t<i class=\"fm fm-close\"></i>\n\t</button>";
 };
 
 module.exports = exports["default"];

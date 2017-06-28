@@ -41,6 +41,7 @@ class Lightbox extends Component {
 			const currentIndex = this.props.currentImage;
 			const nextIndex = nextProps.currentImage + 1;
 			const prevIndex = nextProps.currentImage - 1;
+
 			let preloadIndex;
 
 			if (currentIndex && nextProps.currentImage > currentIndex) {
@@ -128,7 +129,7 @@ class Lightbox extends Component {
 	// ==============================
 
 	renderArrowPrev () {
-		if (this.props.currentImage === 0) return null;
+		//if (this.props.currentImage === 0) return null;
 
 		return (
 			<Arrow
@@ -141,7 +142,7 @@ class Lightbox extends Component {
 		);
 	}
 	renderArrowNext () {
-		if (this.props.currentImage === (this.props.images.length - 1)) return null;
+		//if (this.props.currentImage === (this.props.images.length - 1)) return null;
 
 		return (
 			<Arrow
